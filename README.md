@@ -1,6 +1,6 @@
 # Config-Validator
 
-- [Technical background](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate#technical-background)
+- [Technical background](https://github.com/chris1111/Config-Validator/blob/main/Technical%20background.md)
 
 #### Credit:⬇︎
 - [chris1111](https://github.com/chris1111)
