@@ -1,5 +1,7 @@
 # Config-Validator
 
+- [Technical background](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate#technical-background)
+
 #### Credit:⬇︎
 - [chris1111](https://github.com/chris1111)
 - [Create from Platypus](https://github.com/Project-Platypus/Platypus)
