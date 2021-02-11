@@ -19,7 +19,7 @@ echo " "
 echo "
 ******************************************************
 Config Validator
-Drag config.plist file to to verify it 
+Drag config.plist file to verify it 
 ******************************************************"
 # Set Droping directory and file
 for files in "$@" ;do
