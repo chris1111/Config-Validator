@@ -15,7 +15,7 @@
 
 ![Webp net-gifmaker](https://user-images.githubusercontent.com/6248794/106479561-74997800-6478-11eb-8096-e1f30ed7b3fa.gif)
 
-![move plist](https://user-images.githubusercontent.com/6248794/106479659-9135b000-6478-11eb-81d6-ba826165a5eb.png)
+![Move file](https://user-images.githubusercontent.com/6248794/107689374-bd221400-6c76-11eb-817c-325a32d26d83.png)
 
 ### Follow Video ⇩
 [![Modular Image Creation](https://user-images.githubusercontent.com/6248794/100680251-23b5b800-333f-11eb-8234-50195475605b.png)](https://youtu.be/KYuYnhAMZi8)
