@@ -8,6 +8,7 @@
 - [Create from Platypus](https://github.com/sveinbjornt/Platypus)
 - [ocvalidate Acidanthera](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate)
 
+- Update 14 Feb 2021 Latest ocvalidate
 #### Download Release V-2 ➤ [Config Validator 0.6.7](https://github.com/chris1111/Config-Validator/releases/tag/V2)
 #### Download Release V-1 ➤ [Config Validator 0.6.6](https://github.com/chris1111/Config-Validator/releases/tag/V1)
 
