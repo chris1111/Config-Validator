@@ -9,7 +9,7 @@
 - [ocvalidate Acidanthera](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate)
 
  - Update 13 2021 Config Validator-V6 Only for OC 0.7.1
-#### Download Release V-6 ➤ [Config Validator 0.7.0](https://github.com/chris1111/Config-Validator/releases/tag/V6)
+#### Download Release V-6 ➤ [Config Validator 0.7.1](https://github.com/chris1111/Config-Validator/releases/tag/V6)
 #### Download Release V-5 ➤ [Config Validator 0.7.0](https://github.com/chris1111/Config-Validator/releases/tag/V5)
 #### Download Release V-4 ➤ [Config Validator 0.7.0](https://github.com/chris1111/Config-Validator/releases/tag/V4)
 #### Download Release V-3 ➤ [Config Validator 0.6.8 and 0.6.9](https://github.com/chris1111/Config-Validator/releases/tag/V3)
