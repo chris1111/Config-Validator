@@ -14,12 +14,12 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 # Vars
 apptitle="Config Validator"
-version="1.0"
+version="1.6"
 echo " "
 echo "
 ******************************************************
-Config Validator
-Drag config.plist file to verify it 
+Config Validator OpenCore 0.7.1
+Drag config.plist file to verify it
 ******************************************************"
 # Set Droping directory and file
 for files in "$@" ;do
