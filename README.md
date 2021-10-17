@@ -10,7 +10,7 @@
 
  - Update 16 Oct 2021 Config Validator-V10 for OC 0.7.5
  
-#### Download Release V-9 ➤ [Config Validator 0.7.5](https://github.com/chris1111/Config-Validator/releases/tag/V10)
+#### Download Release V-10 ➤ [Config Validator 0.7.5](https://github.com/chris1111/Config-Validator/releases/tag/V10)
 #### Download Release V-9 ➤ [Config Validator 0.7.4](https://github.com/chris1111/Config-Validator/releases/tag/V9)
 #### Download Release V-8 ➤ [Config Validator 0.7.3](https://github.com/chris1111/Config-Validator/releases/tag/V8)
 #### Download Release V-7 ➤ [Config Validator 0.7.2](https://github.com/chris1111/Config-Validator/releases/tag/V7)
