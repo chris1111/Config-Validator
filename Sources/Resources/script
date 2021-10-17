@@ -18,7 +18,7 @@ version="1.6"
 echo " "
 echo "
 ******************************************************
-Config Validator OpenCore 0.7.4
+Config Validator OpenCore 0.7.5
 Drag config.plist file to verify it
 ******************************************************"
 # Set Droping directory and file
