@@ -8,8 +8,10 @@
 - [Create from Platypus](https://github.com/sveinbjornt/Platypus)
 - [ocvalidate Acidanthera](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate)
 
- - Update 24 Oct 2022 Config Validator for OpenCore 0.8.5
+ - Update 08 Dec 2022 Config Validator for OpenCore 0.8.6 and 0.8.7
  
+#### Download Release V-22 ➤ [Config Validator 0.8.7](https://github.com/chris1111/Config-Validator/releases/tag/V22) 
+#### Download Release V-21 ➤ [Config Validator 0.8.6](https://github.com/chris1111/Config-Validator/releases/tag/V21)
 #### Download Release V-20 ➤ [Config Validator 0.8.5](https://github.com/chris1111/Config-Validator/releases/tag/V20)
 #### Download Release V-19 ➤ [Config Validator 0.8.4](https://github.com/chris1111/Config-Validator/releases/tag/V19)
 #### Download Release V-18 ➤ [Config Validator 0.8.3](https://github.com/chris1111/Config-Validator/releases/tag/V18)
