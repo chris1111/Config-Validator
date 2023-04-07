@@ -1,5 +1,5 @@
 # Config-Validator
-- For OpenCore 0.6 / 0.7 / 0.8 /0.9
+- For OpenCore 0.6 / 0.7 / 0.8 / 0.9
 
 - [Technical background](https://github.com/chris1111/Config-Validator/blob/main/Technical%20background.md)
 
