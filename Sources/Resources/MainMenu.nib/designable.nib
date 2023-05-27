@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,132 +17,22 @@
                 <outlet property="delegate" destination="207" id="446"/>
             </connections>
         </customObject>
-        <customObject id="207" userLabel="ScriptExecController" customClass="ScriptExecController">
+        <customObject id="207" userLabel="SEController" customClass="SEController">
             <connections>
                 <outlet property="aboutMenuItem" destination="232" id="238"/>
-                <outlet property="dropletBox" destination="494" id="502"/>
-                <outlet property="dropletDropFilesLabel" destination="499" id="507"/>
-                <outlet property="dropletMessageTextField" destination="505" id="508"/>
-                <outlet property="dropletProgressIndicator" destination="496" id="504"/>
-                <outlet property="dropletShaderView" destination="519" id="w2q-dA-smc"/>
-                <outlet property="dropletWindow" destination="490" id="512"/>
+                <outlet property="fileMenu" destination="81" id="rcv-iy-bgF"/>
                 <outlet property="hideMenuItem" destination="134" id="239"/>
                 <outlet property="openRecentMenuItem" destination="FvD-xH-BRz" id="V8D-h2-Uw1"/>
-                <outlet property="progressBarCancelButton" destination="206" id="299"/>
-                <outlet property="progressBarDetailsLabel" destination="290" id="300"/>
-                <outlet property="progressBarDetailsTriangle" destination="288" id="301"/>
-                <outlet property="progressBarIndicator" destination="204" id="298"/>
-                <outlet property="progressBarMessageTextField" destination="205" id="297"/>
-                <outlet property="progressBarTextView" destination="307" id="516"/>
-                <outlet property="progressBarWindow" destination="21" id="296"/>
                 <outlet property="quitMenuItem" destination="136" id="240"/>
                 <outlet property="textWindow" destination="216" id="dD5-aT-ujC"/>
                 <outlet property="textWindowCancelButton" destination="220" id="uuU-Xb-xDZ"/>
                 <outlet property="textWindowMessageTextField" destination="366" id="bT3-oV-9zc"/>
                 <outlet property="textWindowProgressIndicator" destination="230" id="AXd-F1-wQr"/>
                 <outlet property="textWindowTextView" destination="225" id="FZy-wJ-th1"/>
-                <outlet property="webView" destination="258" id="GEt-Hd-OFL"/>
-                <outlet property="webViewCancelButton" destination="251" id="i5n-LY-nJs"/>
-                <outlet property="webViewMessageTextField" destination="509" id="Unv-5h-E6P"/>
-                <outlet property="webViewProgressIndicator" destination="277" id="Hun-a2-4wC"/>
-                <outlet property="webViewWindow" destination="247" id="9lw-Pg-xRw"/>
+                <outlet property="viewMenu" destination="ITS-DI-OJD" id="2iy-Fw-JVe"/>
                 <outlet property="windowMenu" destination="24" id="328"/>
             </connections>
         </customObject>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="ProgressBarWindow" animationBehavior="default" id="21" userLabel="ProgressWindow">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="472" y="537" width="438" height="83"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
-            <value key="minSize" type="size" width="438" height="83"/>
-            <value key="maxSize" type="size" width="600" height="83"/>
-            <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="438" height="83"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="204">
-                        <rect key="frame" x="18" y="27" width="310" height="20"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    </progressIndicator>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="205">
-                        <rect key="frame" x="18" y="55" width="403" height="17"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" baseWritingDirection="leftToRight" alignment="left" id="472">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="206">
-                        <rect key="frame" x="338" y="20" width="86" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="473">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="cancel:" target="207" id="215"/>
-                        </connections>
-                    </button>
-                    <button toolTip="Show details" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="288">
-                        <rect key="frame" x="20" y="10" width="13" height="13"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" controlSize="small" borderStyle="border" inset="2" id="474">
-                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="toggleDetails:" target="207" id="303"/>
-                        </connections>
-                    </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="290">
-                        <rect key="frame" x="33" y="7" width="41" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Details" id="475">
-                            <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="304">
-                        <rect key="frame" x="20" y="-203" width="393" height="202"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="2mm-QF-kpX">
-                            <rect key="frame" x="1" y="1" width="391" height="200"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" linkDetection="YES" id="307">
-                                    <rect key="frame" x="0.0" y="0.0" width="391" height="200"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="391" height="200"/>
-                                    <size key="maxSize" width="463" height="10000000"/>
-                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="207" id="489"/>
-                                    </connections>
-                                </textView>
-                            </subviews>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="481">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.39849624060150374" horizontal="NO" id="480">
-                            <rect key="frame" x="323" y="1" width="15" height="200"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
-                </subviews>
-            </view>
-            <connections>
-                <outlet property="delegate" destination="207" id="377"/>
-            </connections>
-            <point key="canvasLocation" x="1016" y="55"/>
-        </window>
         <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="Application" id="56">
@@ -183,11 +72,7 @@ Gw
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit" keyEquivalent="q" id="136">
-                                <connections>
-                                    <action selector="terminate:" target="-2" id="139"/>
-                                </connections>
-                            </menuItem>
+                            <menuItem title="Quit" keyEquivalent="q" id="136"/>
                         </items>
                     </menu>
                 </menuItem>
@@ -209,15 +94,18 @@ Gw
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="xgq-Qk-sfY">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="dh0-Fj-ATR">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="0fd-CD-gUG"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="79">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Close" keyEquivalent="w" id="73">
-                                <connections>
-                                    <action selector="performClose:" target="-1" id="193"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Save to File…" keyEquivalent="s" id="75">
+                            <menuItem title="Save…" keyEquivalent="s" id="75">
                                 <connections>
                                     <action selector="saveToFile:" target="207" id="523"/>
                                 </connections>
@@ -471,6 +359,7 @@ Gw
                                     <action selector="makeTextSmaller:" target="207" id="JTY-6k-ZKY"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="G0T-Im-91a"/>
                         </items>
                     </menu>
                 </menuItem>
@@ -499,49 +388,47 @@ Gw
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Help" id="ssS-yx-lud">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="Jc3-NS-beW">
+                        <items>
+                            <menuItem title="Help" keyEquivalent="?" id="By3-00-4mK">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="ZoJ-wH-vxF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
             </items>
             <connections>
                 <outlet property="delegate" destination="207" id="525"/>
             </connections>
-            <point key="canvasLocation" x="-21" y="164"/>
+            <point key="canvasLocation" x="36" y="0.0"/>
         </menu>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="TextWindow" animationBehavior="default" id="216" userLabel="TextOutputWindow">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="297" y="408" width="580" height="420"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="TextWindow" animationBehavior="default" tabbingMode="disallowed" id="216" userLabel="TextOutputWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="297" y="408" width="562" height="513"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <value key="minSize" type="size" width="400" height="200"/>
             <view key="contentView" id="217">
-                <rect key="frame" x="0.0" y="0.0" width="580" height="420"/>
+                <rect key="frame" x="0.0" y="0.0" width="562" height="513"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
-                        <rect key="frame" x="488" y="7" width="86" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="476">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="cancel:" target="207" id="223"/>
-                        </connections>
-                    </button>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="226">
-                        <rect key="frame" x="9" y="45" width="561" height="367"/>
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="226">
+                        <rect key="frame" x="9" y="76" width="543" height="429"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Hk1-72-Owa">
-                            <rect key="frame" x="1" y="1" width="559" height="365"/>
+                            <rect key="frame" x="1" y="1" width="541" height="427"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" linkDetection="YES" id="225">
-                                    <rect key="frame" x="0.0" y="0.0" width="559" height="365"/>
+                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" linkDetection="YES" id="225" customClass="SETextView">
+                                    <rect key="frame" x="0.0" y="0.0" width="541" height="427"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="559" height="365"/>
-                                    <size key="maxSize" width="561" height="10000000"/>
+                                    <size key="minSize" width="541" height="427"/>
+                                    <size key="maxSize" width="567" height="10000000"/>
                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
                                         <outlet property="delegate" destination="207" id="488"/>
@@ -549,17 +436,41 @@ Gw
                                 </textView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="483">
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="483">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="482">
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="482">
                             <rect key="frame" x="-30" y="1" width="15" height="340"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="230">
-                        <rect key="frame" x="15" y="18" width="16" height="16"/>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="366">
+                        <rect key="frame" x="9" y="89" width="543" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" drawsBackground="YES" id="477">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="placeholderTextColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="gb4-Us-itz">
+                        <rect key="frame" x="493" y="20" width="58" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="AppIconOff" imagePosition="overlaps" alignment="left" inset="2" id="66v-Jz-eUa">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="systemThin" size="1"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <accessibilityConnection property="link" destination="220" id="t3z-RQ-pmU"/>
+                            <action selector="performClick:" target="220" id="tee-hD-69y"/>
+                        </connections>
+                    </button>
+                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="230">
+                        <rect key="frame" x="9" y="34" width="482" height="12"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </progressIndicator>
                 </subviews>
@@ -567,140 +478,25 @@ Gw
             <connections>
                 <outlet property="delegate" destination="207" id="376"/>
             </connections>
-            <point key="canvasLocation" x="-183" y="120"/>
+            <point key="canvasLocation" x="907" y="-769"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="WebViewWindow" animationBehavior="default" id="247" userLabel="WebOutputWindow">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="297" y="408" width="580" height="420"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
-            <value key="minSize" type="size" width="400" height="200"/>
-            <view key="contentView" id="248">
-                <rect key="frame" x="0.0" y="0.0" width="580" height="420"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="251">
-                        <rect key="frame" x="485" y="6" width="86" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="478">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
+        <button verticalHuggingPriority="750" id="220">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+            <buttonCell key="cell" type="bevel" title="Stop" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="476">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="systemThin" size="15"/>
+                <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="cancel:" target="207" id="267"/>
-                        </connections>
-                    </button>
-                    <box fixedFrame="YES" boxType="oldStyle" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="257">
-                        <rect key="frame" x="8" y="45" width="563" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <view key="contentView" id="X4z-hY-QR7">
-                            <rect key="frame" x="1" y="1" width="561" height="365"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <webView fixedFrame="YES" maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="258" customClass="STDragWebView">
-                                    <rect key="frame" x="-1" y="0.0" width="562" height="365"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
-                                        <nil key="identifier"/>
-                                    </webPreferences>
-                                    <connections>
-                                        <outlet property="UIDelegate" destination="207" id="378"/>
-                                        <outlet property="downloadDelegate" destination="207" id="382"/>
-                                        <outlet property="dragDelegate" destination="207" id="kaI-rz-1Ps"/>
-                                        <outlet property="frameLoadDelegate" destination="207" id="381"/>
-                                        <outlet property="policyDelegate" destination="207" id="380"/>
-                                        <outlet property="resourceLoadDelegate" destination="207" id="379"/>
-                                    </connections>
-                                </webView>
-                            </subviews>
-                        </view>
-                    </box>
-                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="277">
-                        <rect key="frame" x="16" y="15" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </progressIndicator>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="509">
-                        <rect key="frame" x="37" y="14" width="429" height="17"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="510">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                </subviews>
-            </view>
+            </buttonCell>
             <connections>
-                <outlet property="delegate" destination="207" id="375"/>
+                <action selector="cancel:" target="207" id="223"/>
             </connections>
-            <point key="canvasLocation" x="1075" y="526"/>
-        </window>
-        <window title="Droplet" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="DropletWindow" animationBehavior="default" id="490" userLabel="DropletWindow">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <rect key="contentRect" x="157" y="273" width="409" height="380"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
-            <view key="contentView" id="491">
-                <rect key="frame" x="0.0" y="0.0" width="409" height="380"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="494">
-                        <rect key="frame" x="39" y="15" width="331" height="342"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView" id="q0i-G4-K1a">
-                            <rect key="frame" x="3" y="3" width="325" height="336"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="505">
-                                    <rect key="frame" x="1" y="89" width="321" height="222"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="center" id="506">
-                                        <font key="font" metaFont="smallSystem"/>
-                                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="519">
-                                    <rect key="frame" x="5" y="6" width="316" height="326"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" drawsBackground="YES" id="520">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="499">
-                                    <rect key="frame" x="77" y="154" width="178" height="54"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Déposer vos kexts ICI" id="500">
-                                        <font key="font" metaFont="system" size="20"/>
-                                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="496">
-                                    <rect key="frame" x="149" y="47" width="32" height="32"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </progressIndicator>
-                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="366">
-                                    <rect key="frame" x="85" y="14" width="160" height="17"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="477">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                        </view>
-                    </box>
-                </subviews>
-            </view>
-            <connections>
-                <outlet property="delegate" destination="207" id="RFt-L5-f73"/>
-            </connections>
-            <point key="canvasLocation" x="1101.5" y="25"/>
-        </window>
+            <point key="canvasLocation" x="-452" y="-624"/>
+        </button>
     </objects>
+    <resources>
+        <image name="AppIconOff" width="128" height="128"/>
+    </resources>
 </document>
