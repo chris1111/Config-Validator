@@ -1,6 +1,6 @@
 #!/bin/sh
 # Config Validator
-# Copyright (c) 2021, chris1111. All Right Reserved
+# Copyright (c) 2021, 2023 chris1111. All Right Reserved
 # Credit: Acidanthera
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -18,7 +18,7 @@ version="1.6"
 echo " "
 echo "
 ******************************************************
-Config Validator OpenCore 0.7.6
+Config Validator OpenCore 0.9.2
 Drag config.plist file to verify it
 ******************************************************"
 # Set Droping directory and file
