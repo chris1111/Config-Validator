@@ -18,7 +18,7 @@ version="1.8"
 echo " "
 echo "
 ******************************************************
-Config Validator OpenCore 0.9.2
+Config Validator OpenCore 0.9.3
 Drag config.plist file to verify it
 ******************************************************"
 # Set Droping directory and file
@@ -26,6 +26,15 @@ for files in "$@" ;do
 echo "Start of verification:"
 Sleep 1
 osascript -e 'do shell script "afplay './Hero.aiff' &> /dev/null &"'
+
+# Activate App
+osascript <<EOD
+  tell application "Config Validator"
+      activate
+  end tell
+EOD
+
+Sleep 2
 ./ocvalidate "$@" 
 
 done
