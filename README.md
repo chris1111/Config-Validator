@@ -10,6 +10,9 @@
 
 Latest Update 08 October 2023 Config Validator 0.9.5
 
+#### Download Release V-33 ➤ [Config Validator 0.9.8](https://github.com/chris1111/Config-Validator/releases/tag/V33)
+#### Download Release V-32 ➤ [Config Validator 0.9.7](https://github.com/chris1111/Config-Validator/releases/tag/V32)
+#### Download Release V-31 ➤ [Config Validator 0.9.6](https://github.com/chris1111/Config-Validator/releases/tag/V31)
 #### Download Release V-30 ➤ [Config Validator 0.9.5](https://github.com/chris1111/Config-Validator/releases/tag/V30)
 #### Download Release V-29 ➤ [Config Validator 0.9.4](https://github.com/chris1111/Config-Validator/releases/tag/V29)
 #### Download Release V-28 ➤ [Config Validator 0.9.3](https://github.com/chris1111/Config-Validator/releases/tag/V28)
